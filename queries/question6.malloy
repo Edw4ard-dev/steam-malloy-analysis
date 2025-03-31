@@ -1,0 +1,9 @@
+import '../models/steam.malloy'
+
+# bar_chart
+run: steam_data -> {
+  group_by: tags
+  aggregate: tag_count is count()
+  order_by: tag_count desc
+  limit: 10
+};
