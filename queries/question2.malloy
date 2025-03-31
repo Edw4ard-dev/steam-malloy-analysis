@@ -1,0 +1,9 @@
+import '../models/steam.malloy'
+
+# bar_chart
+run: steam_data -> {
+  group_by: developers
+  aggregate: game_count is count()
+  order_by: game_count desc
+  limit: 10
+};
