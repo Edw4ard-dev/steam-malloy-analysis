@@ -1,0 +1,9 @@
+import '../models/steam.malloy'
+
+# bar_chart
+run: steam_data -> {
+  group_by: supported_languages
+  aggregate: lang_count is count()
+  order_by: lang_count desc
+  limit: 10
+};
