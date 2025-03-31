@@ -1,0 +1,8 @@
+import '../models/steam.malloy'
+
+run: steam_data -> {
+  group_by: name
+  aggregate: count_of_games is count()
+  order_by: count_of_games desc
+  limit: 10
+};
