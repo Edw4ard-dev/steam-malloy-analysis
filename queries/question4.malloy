@@ -1,0 +1,9 @@
+import '../models/steam.malloy'
+
+# bar_chart
+run: steam_data -> {
+  group_by: publishers
+  aggregate: pub_count is count()
+  order_by: pub_count desc
+  limit: 10
+};
