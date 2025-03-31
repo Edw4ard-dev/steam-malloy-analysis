@@ -1,9 +1,0 @@
-import '../models/steam.malloy'
-
-# bar_chart
-run: steam_data -> {
-  group_by: platform
-  aggregate: platform_count is count()
-  order_by: platform_count desc
-  limit: 10
-};
