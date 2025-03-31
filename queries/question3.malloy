@@ -1,0 +1,9 @@
+import '../models/steam.malloy'
+
+# bar_chart
+run: steam_data -> {
+  group_by: genres
+  aggregate: genre_count is count()
+  order_by: genre_count desc
+  limit: 10
+};
